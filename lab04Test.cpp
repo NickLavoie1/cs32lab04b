@@ -14,6 +14,7 @@ int main()
   string three = "-x";
   string four = "as14s";
   string five = "Hi";
+  string seven = "--foo--";
   vec.push_back(one);
   vec.push_back(two);
   vec.push_back(three);
@@ -21,6 +22,7 @@ int main()
   vec.push_back(five);
   vec.push_back(five);
   vec.push_back(six);
+  vec.push_back(seven);
 
   WordCount test;
   for(int i=0;i<vec.size();i++)

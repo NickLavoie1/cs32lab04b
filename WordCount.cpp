@@ -91,8 +91,7 @@ int WordCount::incrWordCount(std::string word) {
 
 
 bool WordCount::isWordChar(char c) {
-	// STUB
-	return false;
+  return isalpha(c);
 }
 
 
@@ -102,13 +101,17 @@ std::string WordCount::stripWord(std::string word) {
     {
       if(isalpha(word[i]))
 	{
-	  res+=toupper(word[i]);
+	  res+=word[i];
 	}
       else if(word[i] == '/' || word[i] == '-')
 	{
 	  if(i>=1 && i<word.length()-1)
 	    {
 	      res+=word[i];
+	    }
+	  else
+	    {
+	      return "";
 	    }
 	}
       
