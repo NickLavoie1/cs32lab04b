@@ -105,18 +105,18 @@ std::string WordCount::stripWord(std::string word) {
 	}
       else if(word[i] == '/' || word[i] == '-')
 	{
-	  if(i>=1 && i<word.length()-1)
+	  if(i==0 || i =word.length()-1)
 	    {
-	      res+=word[i];
+	      
+	    }
+	  else if(!isalpha(word[i-1])||!isalpha(word[i+1]))
+	    {
+	      
 	    }
 	  else
 	    {
-	      return "";
+	      res+= word[i];
 	    }
-	}
-      else
-	{
-	  return "";
 	}
       
     }
