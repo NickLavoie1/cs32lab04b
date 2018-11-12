@@ -73,7 +73,7 @@ int WordCount::incrWordCount(std::string word) {
 		  nIndex = j;
 		}
 	    }
-	  table[index].at(nIndex).second+=1;
+	  (table[index].at(nIndex)).second++;
 	  return (table[index].at(nIndex)).second;
 	}
       else
@@ -113,6 +113,10 @@ std::string WordCount::stripWord(std::string word) {
 	    {
 	      return "";
 	    }
+	}
+      else
+	{
+	  return "";
 	}
       
     }
